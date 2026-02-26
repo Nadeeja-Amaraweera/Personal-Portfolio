@@ -208,7 +208,7 @@ section {
 
 /* About me section */
 .title {
-    padding: 60px 0;
+    padding: 60px 0 90px 0;
     color: white;
     text-align: center;
     display: flex;
