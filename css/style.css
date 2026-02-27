@@ -374,7 +374,7 @@ section {
     padding: 2px;
     /* border thickness */
     border-radius: 18px;
-    background: linear-gradient(to bottom, #934900, #4f2100);
+    background: linear-gradient(to bottom, #934900, #371700);
     background-size: 100% 300%;
     animation: workborder 4s ease infinite;
     position: relative;
@@ -402,7 +402,8 @@ section {
 }
 .work-item h2 {
     padding: 20px 15px;
-    color: white;
+    color: #C7C7C7;
+    font-weight: lighter;
     background-color: #252525;
     border-radius: 0px 0px 17px 17px;
     font-size: medium;
@@ -424,3 +425,72 @@ section {
 
     }
 }
+.journey{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+}
+.card-journey{
+    display: flex;
+    max-width: 550px;
+    padding: 20px;
+}
+
+.timeline-line{
+    width: 4px;
+    background-color: #a35a1e;
+    align-self: stretch;
+    position: relative;
+    margin-right: 30px;
+    border-radius: 2px;
+}
+.timeline-line::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(to bottom, #FF7000, #4b2000);
+    border-radius: 50%;
+    border: 2px solid #a35a1e; /* Border matching the line color */
+}
+
+.content-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px #9E4400 solid;
+    border-radius: 10px;
+    padding: 20px;
+}
+.orange-square {
+    width: 24px;
+    height: 18px;
+    border-radius: 6px;
+    margin-right: 15px;
+    background: linear-gradient(to bottom, #FF7000, #994300);
+}
+.card-header{
+    display: flex;
+    flex-direction: row;
+}
+.date-text{
+    color: #C7C7C7;
+    font-size: 19px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #FF7000, #B44F00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.journer-card-body{
+    color: #8A8A8A;
+    font-size: 16px;
+}
+
