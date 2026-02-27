@@ -268,3 +268,82 @@ section {
     cursor: pointer;
     font-size: 15px;
 }
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.Oneskill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.Oneskill h2 {
+    color: #F66C01;
+    font-size: 22px;
+    font-weight: 400;
+}
+.Oneskill h3 {
+    color: #979694;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.skill-item {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-svg {
+            /* Rotates the entire ring so the gap starts exactly at the top */
+            transform: rotate(-90deg);
+        }
+
+.ring-path {
+    fill: none;
+    stroke: #ef7f1a;
+    stroke-width: 25;
+    /* Thickness of the ring */
+    stroke-linecap: round;
+    /* Creates the rounded ends */
+    animation: mysql 1s linear forwards;
+    /* Rotates the ring continuously */
+}
+
+.skill-image {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+}
+
+.skill-image img {
+    position: absolute;
+    width: 100%;
+}
+@keyframes mysql {
+            from {
+                stroke-dashoffset: 100%;
+            }
+
+            to {
+                stroke-dashoffset: 30%;
+            }
+        }
