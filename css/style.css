@@ -378,6 +378,7 @@ section {
     background-size: 100% 300%;
     animation: workborder 4s ease infinite;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .work-item-image {
     position: relative;
@@ -519,6 +520,7 @@ section {
     animation: workborder 4s ease infinite;
     border-radius: 25px;
     background-color: #252525;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .assignment-item{
     display: flex;
@@ -621,3 +623,63 @@ section {
     transform: translateX(-300%);
 }
 
+
+/* Certificate Section */
+.certificate-grid{
+    display: flex;
+    margin: auto;
+    width: 50%;
+    gap: 50px;
+}
+.certificate-image-border{
+    background: linear-gradient(to bottom, #ffdcb9, #a85c00);
+    animation: certificateworkborder 4s ease infinite;
+    background-size: 100% 300%;
+    padding: 3px;
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+    height: fit-content;
+    border-radius: 18px;
+}
+.certificate-image{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+ .certificate-image img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.certificate-content{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.certificate-content h2{
+    color: #F66C01;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 20px 0;
+}
+.certificate-content h3{
+    color: #C7C7C7;
+} 
+
+@keyframes certificateworkborder {
+    0% {
+        background-position: 0% 0%;
+
+    }
+
+    50% {
+        background-position: 0% 100%;
+
+    }
+
+    100% {
+        background-position: 0% 0%;
+
+    }
+}
