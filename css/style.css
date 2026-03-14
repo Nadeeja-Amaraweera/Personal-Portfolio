@@ -76,6 +76,7 @@ html {
     font-size: 18px;
 }
 
+
 /* Home page */
 
 .home-grid-container {
@@ -213,8 +214,47 @@ html {
     font-weight: 400;
 }
 
+@media (max-width:1036px) {
+    .nav-menu {
+        display: none;
+    }
+    .navbar{
+        width: 90%;
+    }
+
+    .container {
+        width: 90%;
+    }
+    .homeDetails {
+        width: 100%;
+        align-items: left;
+        margin-top: 10px;
+    }
+    .homeDetails>h1 {
+        font-size: 45px;
+    }
+    .homeDetails>h2 {
+        font-size: 20px;
+    }
+    
+    
+}
+
+@media (max-width:768px) {
+    
+    .homeImage{
+        display: none;
+    }
+    .homeDetails {
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+}
+
 /* About me section */
-.title {
+.title  {
     padding: 60px 0 90px 0;
     color: white;
     text-align: center;
