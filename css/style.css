@@ -12,8 +12,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
 .container {
     width: 80%;
     height: auto;
@@ -214,6 +212,11 @@ html {
     font-size: 18px;
     font-weight: 400;
 }
+
+
+
+
+
 
 /* About me section */
 .title {
