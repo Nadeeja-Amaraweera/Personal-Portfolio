@@ -396,22 +396,24 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 20px;
+    gap: 10px;
 }
 
 .aboutmeImage {
-    width: 490px;
+    width: 34%;
     height: fit-content;
-    border-radius: 25px;
+    border-radius: 55px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
 }
 
 .aboutmeImage img {
     width: 100%;
+
 }
 
 .aboutmeDetails {
@@ -425,11 +427,12 @@ html {
     letter-spacing: 0.5px;
     word-spacing: 5px;
     line-height: 1.3;
+    align-items: center;
 }
 
 .downloadCV-aboutme {
-    height: 46px;
-    width: 176px;
+    padding: 10px 20px;
+    width: 150px;
     background-color: #F66C01;
     color: #fff;
     border: none;
@@ -438,8 +441,53 @@ html {
     font-size: 15px;
 }
 
+@media (max-width:1036px) {
+    .aboutmeImage {
+        width: 80%;
+        border-radius: 35px;
+    }
+    .aboutmeDetails {
+        width: 100%;
+        padding: 0 20px;
+        align-items: center;
+        text-align:justify;
+    }
+     .aboutmeDetails p{
+        font-size: 16px;
+     }
+}
+
 @media (max-width:768px) {
-    
+    .title {
+        padding: 40px 0 60px 0;
+    }
+    .title h1 {
+        font-size: 28px;
+    }
+    .title p {
+        font-size: 16px;
+    }
+    .aboutme-grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutmeImage {
+        width: 60%;
+        border-radius: 35px;
+    }
+    .aboutmeDetails {
+        width: 100%;
+        padding: 30px 20px;
+        align-items: center;
+        text-align:justify;
+    }
+    .aboutmeDetails p{
+        font-size: 16px;
+    }
+    .downloadCV-aboutme {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
 /* Skill section */
 .skills {
@@ -452,7 +500,6 @@ html {
 
 .skills-row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 60px;
@@ -508,7 +555,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
+    width: 90px;
 }
 
 .skill-image img {
@@ -526,9 +573,81 @@ html {
     }
 }
 
+@media (max-width:1036px) {
+    .skill-item {
+        width: 120px;
+        height: 120px;
+    }
+    .skill-image {
+        width: 60px;
+    }
+     .skills-row {
+        gap: 40px;
+    }
+}
+@media (max-width:800px) {
+    .skill-item {
+        width: 100px;
+        height: 100px;
+    }
+    .skill-image {
+        width: 50px;
+    }
+     .skills-row {
+        gap: 30px;
+    }
+    .Oneskill h2 {
+        font-size: 18px;
+    }
+    .Oneskill h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:711px) {
+     .skill-item {
+        width: 80px;
+        height: 80px;
+    }
+    .skill-image {
+        width: 40px;
+    }
+    .Oneskill h2 {
+        font-size: 16px;
+    }
+    .Oneskill h3 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:546px) {
+    .skills {
+        display: flex;
+        flex-direction: row;
+    }
+     .skill-item {
+        width: 100px;
+        height: 100px;
+    }
+    .skills-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .skill-image {
+        width: 40px;
+    }
+    .Oneskill h2 {
+        font-size: 16px;
+    }
+    .Oneskill h3 {
+        font-size: 12px;
+    }
+}
+
+
 /* my works section */
 .works-container {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -536,13 +655,12 @@ html {
 
 .work-row-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
 }
 
 .work-item {
-    width: 30%;
+    width: 500px;
     height: fit-content;
     display: flex;
     background-color: #252525;
@@ -572,7 +690,7 @@ html {
 .work-item-image {
     position: relative;
     width: 100%;
-    height: 410px;
+    height: 250px;
     border-radius: 17px 17px 0px 0px;
     overflow: hidden;
 }
@@ -616,6 +734,10 @@ html {
         background-position: 0% 0%;
 
     }
+}
+
+@media (max-width:1036px) {
+    
 }
 
 /* My Journey */
