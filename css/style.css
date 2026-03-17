@@ -102,6 +102,8 @@ html {
 }
 
 
+
+
 /* Home page */
 
 .home-grid-container {
@@ -489,6 +491,22 @@ html {
         font-size: 14px;
     }
 }
+
+@media (max-width:546px) {
+    .aboutmeDetails p{
+        font-size: 14px;
+        word-spacing: normal;
+     }
+     .aboutmeImage {
+        width: 80%;
+        border-radius: 35px;
+     }
+      .downloadCV-aboutme {
+        padding: 8px 16px;
+        font-size: 14px;
+     }
+    }
+
 /* Skill section */
 .skills {
     display: flex;
@@ -784,7 +802,7 @@ html {
     }
      .work-item h2 {
         font-size: small;
-        padding: 10px 5px;
+        padding: 10px 15px;
     }
 }
 
@@ -813,7 +831,6 @@ html {
 .card-journey {
     display: flex;
     max-width: 550px;
-    padding: 20px;
 }
 
 .timeline-line {
@@ -880,8 +897,28 @@ html {
     font-size: 16px;
 }
 
-@media (screen) {
-    
+@media (max-width:1036px) {
+    .title {
+        width: 80%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+    }
+    .journey {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width:768px) {
+    .journer-card-body {
+        font-size: 14px;
+    }
+
+    .date-text {
+        font-size: 16px;
+    }
 }
 
 /* Assignment Section */
@@ -1235,4 +1272,31 @@ textarea:focus {
 
 .footerlinks hr {
     width: 100%;
+}
+
+@media (max-width:768px) {
+    
+    .title h1 {
+        font-size: 28px;
+    }
+    .title p {
+        font-size: 16px;
+    }
+    
+}
+
+@media (max-width:425px) {
+    .title {
+        width: 90%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+    }
+    .title h1 {
+        font-size: 24px;
+    }
+    .title p {
+        font-size: 14px;
+    }
 }
