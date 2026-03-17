@@ -880,6 +880,10 @@ html {
     font-size: 16px;
 }
 
+@media (screen) {
+    
+}
+
 /* Assignment Section */
 .assignments-container {
     display: flex;
