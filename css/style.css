@@ -29,6 +29,7 @@ html {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    overflow: hidden;
 }
 
 .navlogo {
@@ -71,15 +72,153 @@ html {
     font-family: 'ABeeZee', sans-serif;
 }
 
-.btnHireMe {
-    padding: 10px 20px;
-    background-color: #F66C01;
-    color: #fff;
+
+/* BURGER BUTTON */
+.burger-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: transparent;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
-    font-size: 18px;
+    top: 5px;
+    right: 5px;
+    padding: 0;
+    z-index: 2000;
 }
+
+.burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #F66C01;
+    border-radius: 6px;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Animate to X */
+.burger-btn.active .burger-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.burger-btn.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-btn.active .burger-line:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+.btnHireMe {
+    --color: #F66C01;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .6em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 700;
+    font-size: 17px;
+    border: 1px solid;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+}
+
+.btnHireMe::before,
+.btnHireMe::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+.btnHireMe::before {
+    top: -1em;
+    left: -1em;
+}
+
+.btnHireMe::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.btnHireMe:hover::before,
+.btnHireMe:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.btnHireMe:hover {
+    color: rgb(10, 25, 30);
+    color: #000000;
+}
+
+.btnHireMe:active {
+    filter: brightness(.8);
+}
+.burger-links{
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 10%;
+    width: 100%;
+    height: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.burger-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.burger-links a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.burger-links a:hover {
+    color: #F66C01;
+}
+
+.burger-links.active{
+    transform: translateX(0);
+}
+
+.burger-links {
+    right: -100%; /* not translateX */
+    transform: none; /* remove translateX */
+}
+
+.burger-links.active {
+    right: 0;
+}
+
+
 
 @media (max-width:1036px) {
     .nav-menu li a {
@@ -263,6 +402,38 @@ html {
     font-weight: 400;
 }
 
+@keyframes blink {
+
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--text-color);
+    }
+}
+
+#typing-text {
+    border-right: 3.5px solid black;
+    /* Simulasi kursor yang berkedip */
+    white-space: nowrap;
+    overflow: hidden;
+    /* Agar teks tidak meluap */
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    /* Pastikan line-height tetap ada */
+    display: inline-block;
+    /* Agar ukuran elemen sesuai dengan teks */
+    min-height: calc(3rem * 1.5);
+    /* Menjaga tinggi elemen saat teks belum muncul */
+}
+
+#typing-text {
+    animation: blink 0.7s steps(2) infinite;
+}
+
 @media (max-width:1036px) {
 
     .container {
@@ -307,6 +478,18 @@ html {
     .experience-item p {
         font-size: 15px;
     }
+
+    #typing-text {
+        font-size: 2.5rem;
+        min-height: calc(2.5rem * 1.5);
+        /* Menjaga tinggi elemen saat teks belum muncul */
+    }
+}
+
+@media (min-width: 768px) {
+    .burger-btn {
+        display: none;
+    }
 }
 
 @media (max-width:768px) {
@@ -349,6 +532,12 @@ html {
 
     .social-icons {
         gap: 10px;
+    }
+
+    #typing-text {
+        font-size: 2rem;
+        min-height: calc(2rem * 1.5);
+        /* Menjaga tinggi elemen saat teks belum muncul */
     }
 
 
@@ -595,8 +784,10 @@ html {
     stroke-width: 25;
     stroke-linecap: round;
     transform-origin: center;
-    stroke-dasharray: 600;     /* full circle length */
-    stroke-dashoffset: 141.37;    /* start empty */
+    stroke-dasharray: 600;
+    /* full circle length */
+    stroke-dashoffset: 141.37;
+    /* start empty */
     transition: stroke-dashoffset 1.4s ease;
 }
 
@@ -711,7 +902,7 @@ html {
 
 
 /* my works section */
-.works-container {
+.project-container {
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -782,6 +973,32 @@ html {
     font-size: medium;
 }
 
+.wokrsnavigatebtn {
+    width: 150px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+.wokrsnavigatebtn:hover {
+    background-color: #F66C01;
+    color: #ffffff;
+    border: 2px solid #F66C01;
+}
+
+.wokrsnavigatebtn.active {
+    background-color: #cf5a00;
+    color: #ffffff;
+    border: 2px solid #cf5a00;
+}
+
+
+
 @keyframes workborder {
     0% {
         background-position: 0% 0%;
@@ -800,17 +1017,23 @@ html {
 }
 
 @media (max-width:1600px) {
-    .works-container {
+    .project-container {
         width: 70%;
     }
 
     .work-item {
         width: 45%;
     }
+
+    .wokrsnavigatebtn {
+        width: 130px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width:1314px) {
-    .works-container {
+    .project-container {
         width: 80%;
     }
 }
@@ -827,7 +1050,7 @@ html {
 }
 
 @media (max-width:870px) {
-    .works-container {
+    .project-container {
         width: 90%;
     }
 
@@ -837,7 +1060,7 @@ html {
 }
 
 @media (max-width:786px) {
-    .works-container {
+    .project-container {
         width: 90%;
         display: flex;
         flex-direction: row;
@@ -864,7 +1087,7 @@ html {
 }
 
 @media (max-width:550px) {
-    .works-container {
+    .project-container {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1424,7 +1647,9 @@ textarea:focus {
         padding: 15px;
     }
 }
+
 @media (max-width:640px) {
+
     .contact-me-inputs input,
     textarea {
         width: 80vw;
@@ -1501,9 +1726,10 @@ textarea:focus {
 }
 
 @media (max-width:768px) {
-    .footerlinks{
+    .footerlinks {
         gap: 10px;
     }
+
     .footerlinks ul {
         flex-direction: column;
         gap: 20px;
@@ -1525,7 +1751,6 @@ textarea:focus {
     .title p {
         font-size: 16px;
     }
-
 }
 
 @media (max-width:425px) {
@@ -1549,10 +1774,14 @@ textarea:focus {
 .fade-section {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.3s ease;
+    transition: all 1.5s ease;
 }
 
 .fade-section.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.hidden {
+    display: none;
 }

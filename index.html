@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Nadeeja Amaraweera</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,8 +26,20 @@
 </head>
 
 <body>
+
+    <div class="burger-links">
+        <ul class="links-navigation">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutme">About me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+    </div>
+
     <!-- Home Section -->
     <section id="home" class="fade-section">
+
+
         <nav class="navbar">
             <h2 class="navlogo">
                 ND.DEV
@@ -51,13 +63,22 @@
             <button class="btnHireMe">
                 Hire me
             </button>
+
+
+
+            <button class="burger-btn" id="burgerBtn" aria-label="Menu" aria-expanded="false">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
         </nav>
 
         <div class="container">
             <div class="home-grid-container">
                 <div class="homeDetails">
                     <h2 style="font-family: &quot;Open Sans&quot;, sans-serif;">Hi I am</h2>
-                    <h2 style="font-family: &quot;Open Sans&quot;, sans-serif;">Nadeeja Amaraweera
+                    <h2 style="font-family: &quot;Open Sans&quot;, sans-serif;"><span id="typing-text"></span>
                     </h2>
                     <h1 style="font-family: &quot;Anta&quot;, sans-serif;">UI/UX Designer</h1>
                     <div class="social-icons">
@@ -70,7 +91,7 @@
                         <div class="logo-circle">
                             <img src="assets/sociallinks/e1698788-9984-40f9-876c-e4fdaa5dbd70.png" alt="">
                         </div>
-                        
+
                     </div>
 
                     <div class="homebuttons">
@@ -310,8 +331,13 @@
             <h1 style="font-family: &quot;Anta&quot;, sans-serif;">Works</h1>
             <p style="font-family: &quot;ABeeZee&quot;, sans-serif;">A collection of UI/UX designs and video editing
                 projects showcasing creativity, problem-solving skills, and real-world design solutions.</p>
+
+            <div style="display: flex; gap: 10px; align-items: center; justify-content: center; margin-top: 20px;">
+                <button class="wokrsnavigatebtn active" id="work-project-btn">Projects</button>
+                <button class="wokrsnavigatebtn" id="work-assignment-btn">Assignments</button>
+            </div>
         </div>
-        <div class="container works-container">
+        <div class="container project-container">
 
             <div class="work-row-grid">
                 <div class="work-item">
@@ -360,6 +386,144 @@
                 </div>
 
             </div>
+        </div>
+
+        <div class="container assignments-container hidden">
+            <div class="assignments">
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="assignments">
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="assignments">
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+                <div class="assignment-items">
+                    <div class="assignment-item">
+                        <div class="assignment-image">
+                            <!-- <img src="assets/assignment1.png" alt=""> -->
+                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
+                        </div>
+                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
+                    </div>
+                </div>
+
+
+
+            </div>
+
         </div>
 
     </section>
@@ -410,154 +574,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-    </section>
-
-    <!-- Assignment Section -->
-    <section class="assignment fade-section">
-        <div class="title">
-            <h1 style="font-family: &quot;Anta&quot;, sans-serif;">Assignments</h1>
-            <p style="font-family: &quot;ABeeZee&quot;, sans-serif;">Academic and practical assignments related to UI/UX
-                design and multimedia, demonstrating learning progress and hands-on experience.</p>
-        </div>
-
-        <div class="container assignments-container">
-            <div class="assignments">
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-            <div class="assignments">
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-            <div class="assignments">
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-                <div class="assignment-items">
-                    <div class="assignment-item">
-                        <div class="assignment-image">
-                            <!-- <img src="assets/assignment1.png" alt=""> -->
-                            <i class="fa-regular fa-file" style="color: rgb(232, 149, 5, 0.8);"></i>
-                        </div>
-                        <h3 style="font-family: &quot;ABeeZee&quot;, sans-serif;">Assignment 01</h3>
-                    </div>
-                </div>
-
-
-
-            </div>
-
         </div>
 
     </section>
@@ -668,8 +684,8 @@
         <div class="container footer-container">
             <div class="footerlinks">
                 <h2 class="navlogo">
-                ND.DEV
-            </h2>
+                    ND.DEV
+                </h2>
                 <ul>
                     <a href="#home" style="font-family: &quot;ABeeZee&quot;, sans-serif;">
                         <li>Home</li>
@@ -694,7 +710,7 @@
                     <div class="logo-circle">
                         <img src="assets/sociallinks/e1698788-9984-40f9-876c-e4fdaa5dbd70.png" alt="">
                     </div>
-                    
+
                 </div>
                 <div class="contact-boxes">
                     <div class="contact-box">
