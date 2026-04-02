@@ -593,11 +593,11 @@ html {
     fill: none;
     stroke: #ef7f1a;
     stroke-width: 25;
-    /* Thickness of the ring */
     stroke-linecap: round;
-    /* Creates the rounded ends */
-    animation: mysql 1s linear forwards;
-    /* Rotates the ring continuously */
+    transform-origin: center;
+    stroke-dasharray: 625;     /* full circle length */
+    stroke-dashoffset: 141.37;    /* start empty */
+    transition: stroke-dashoffset 1.4s ease;
 }
 
 .skill-image {
@@ -1545,4 +1545,15 @@ textarea:focus {
     .title p {
         font-size: 14px;
     }
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.3s ease;
+}
+
+.fade-section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
