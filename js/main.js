@@ -13,19 +13,23 @@ sections.forEach(sec => observer.observe(sec));
 
 const skills = document.querySelectorAll('.Oneskill');
 
-// 90% → 625 - (625 * 0.9) = 62.5
-const observer2 = new IntersectionObserver((entries) => {
+const observer3 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
 
         if (entry.isIntersecting) {
             const ring = entry.target.querySelector('.ring-path');
-            
-            // example: 90% → convert to circle offset
+
+            // read percentage from h2 (ex: "90%")
             let percent = entry.target.querySelector('h2').innerText.replace('%', '');
-            let offset = 625 - (625 * (percent / 100));
+            percent = Number(percent) / 100;
+
+            // ring full length = 600
+            let offset = 600 - (600 * percent);
 
             ring.style.strokeDashoffset = offset;
         }
 
     });
 }, { threshold: 0.4 });
+
+skills.forEach(skill => observer3.observe(skill));
